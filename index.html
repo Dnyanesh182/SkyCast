@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <!-- Weather card component -->
+        <div class="card">
+            <!-- Search section -->
+            <div class="search">
+                <input type="text" id="city-input" placeholder="Search for a city..." spellcheck="false">
+                <button id="search-btn">
+                    <img src="images/search.png" alt="Search">
+                </button>
+            </div>
+
+            <!-- Current location button -->
+            <div class="location-btn">
+                <button id="current-location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="8"></circle>
+                        <line x1="12" y1="2" x2="12" y2="4"></line>
+                        <line x1="12" y1="20" x2="12" y2="22"></line>
+                        <line x1="4" y1="12" x2="2" y2="12"></line>
+                        <line x1="22" y1="12" x2="20" y2="12"></line>
+                    </svg>
+                    Use My Location
+                </button>
+            </div>
+
+            <!-- Error message display -->
+            <div class="error" id="error-message">
+                <p>City not found. Please try again.</p>
+            </div>
+
+            <!-- Loading indicator -->
+            <div class="loading" id="loading-indicator">
+                <div class="spinner"></div>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <!-- Weather information display -->
+            <div class="weather" id="weather-info">
+                <!-- Location and date header -->
+                <div class="weather-header">
+                    <h2 id="city-name">City</h2>
+                    <p id="date-time">--</p>
+                </div>
+
+                <!-- Current temperature and weather icon -->
+                <div class="weather-main">
+                    <img src="images/default.png" alt="Weather Icon" id="weather-icon">
+                    <div class="temperature-container">
+                        <h1 id="temperature">--°C</h1>
+                        <p id="feels-like">Feels like: --°C</p>
+                        <p id="weather-description">--</p>
+                    </div>
+                </div>
+
+                <!-- Weather details section -->
+                <div class="details">
+                    <!-- Humidity -->
+                    <div class="col">
+                        <img src="images/humidity.png" alt="Humidity">
+                        <div>
+                            <p id="humidity">--%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <!-- Wind speed -->
+                    <div class="col">
+                        <img src="images/wind.png" alt="Wind">
+                        <div>
+                            <p id="wind-speed">-- km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                    <!-- Pressure -->
+                    <div class="col">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M2 12h20"></path>
+                        </svg>
+                        <div>
+                            <p id="pressure">-- hPa</p>
+                            <p>Pressure</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temperature unit toggle buttons -->
+                <div class="units-toggle">
+                    <button id="celsius" class="active">°C</button>
+                    <button id="fahrenheit">°F</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer with attribution -->
+        <div class="footer">
+            <p>Weather data provided by <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
