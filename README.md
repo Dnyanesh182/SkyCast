@@ -24,7 +24,7 @@ A modern, responsive weather application that provides real-time weather informa
 
 ## 🚀 Live Demo
 
-Check out the live demo of the application [here](https://yourusername.github.io/weather-forecast-app).
+Check out the live demo of the application [here](https://dnyanesh182.github.io/SkyCast/).
 
 ## 🔧 Setup and Installation
 
